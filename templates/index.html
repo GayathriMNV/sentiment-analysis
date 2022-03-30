@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html >
+<body  align="center" style="background-color:turquoise;">
+<head>
+  <meta charset="UTF-8">
+  <title>Sentiment Based Product Recommedation System</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+      body {
+        font-family: 'Tangerine', serif;
+        font-size: 20px;
+      }
+    </style>
+
+
+</head>
+
+<body>
+ <div class="login">
+  <h1 style="text-align:center">Sentiment Based Product Recommedation System</h1>
+  <h5>Enter User Name for Product Recommendations </h5>
+
+    <form align="center" action="{{ url_for('predict')}}" method="post">
+      
+      <input type="text" style="text-align:center" name="reviews_username" placeholder="Enter User Name" required="required" />
+        <br>         
+
+        <button align="center" type="submit" class="btn btn-primary btn-block btn-large">Submit</button>
+
+    </form>
+
+   <br>
+   <br>
+  
+
+
+ </div>
+  <div class="row">
+  <div class="col-12">
+  <label class="labelText"> <b>Top 5 Products Recommended for {{user_name}} : </b> </label>
+
+  <br>
+   <br>
+   {{ prediction_text}}
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+ 
+ </div>
+
+
+</body>
+</html>
