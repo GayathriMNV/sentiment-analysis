@@ -19,6 +19,8 @@ import pickle as pickle
 
 # Importing libraries for text preprocessing and analysis
 import re, nltk, spacy, string
+nltk.download('wordnet')
+nltk.download('punkt')
 from nltk.corpus import stopwords
 #nltk.download('omw-1.4')
 from sklearn.feature_extraction.text import TfidfVectorizer,CountVectorizer
