@@ -17,7 +17,7 @@ tmdbv3api==1.6.1
 requests==2.24.0
 lxml==4.6.3
 pickleshare==0.7.5
-
+nltk>=3.5
 
 
 
